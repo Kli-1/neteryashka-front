@@ -85,6 +85,7 @@ a:not(.nounderline):hover::after{
 }
 .CodeAction button{
     padding: 0.5rem;
+    cursor: pointer;
     margin: 2% 5%;
     position: relative;
     outline: none;
@@ -93,7 +94,7 @@ a:not(.nounderline):hover::after{
     border: 1px solid #000;
     overflow: hidden;
     flex-grow: 1;
-    transition: 0.35s color ease;
+    transition: 0.35s all ease;
 }
 .CodeAction button::before{
     content: "";
@@ -127,6 +128,9 @@ a:not(.nounderline):hover::after{
 }
 .CodeAction button:hover::after{
     transform: skewX(-15deg) translateX(50%);
+}
+.CodeAction button:active{
+    filter: brightness(75%);
 }
 main{
     padding: 5% 0;
