@@ -6,13 +6,14 @@
     -webkit-user-drag: none;
     box-sizing: border-box;
 }
+body{
+    background-color: lightblue;
+}
 header{
     display: flex;
     width: 100%;
     align-items: center;
     flex-wrap: wrap;
-    position: sticky;
-    top: 0;
     background-color: skyblue;
     z-index: 2;
     box-shadow: 0 0 3px #0007;
@@ -78,6 +79,7 @@ a:not(.nounderline):hover::after{
 .CodeAction input[type="text"]{
     padding: 0.5rem;
     outline: none;
+    background: transparent;
     margin: 2% 0;
     flex-grow: 2;
     border: none;
@@ -145,25 +147,27 @@ main p{
     padding: 0.25% 25%;
     text-align: center;
     margin: 0 auto;
-    font-size: 18px;
+    font-size: 14px;
 }
 main small{
     display: inline-block;
     color: #999;
     max-width: 50%;
+    font-size: 10px;
 }
 .AboutSafety_Header{
     font-weight: normal;
-    font-size: 49px;
-    padding: 2.5% 5%;
-    margin: 5% 0;
+    font-size: 32px;
+    text-align: center;
+    padding: 0.5% 5%;
+    margin: 1.5% 0;
 }
 .keyFeatures{
     width: auto;
-    margin: 1.5% 15%;;
+    margin: 0.5% 15%;;
     border: 2px solid #222;
     border-radius: 5px;
-    padding: 5%;
+    padding: 2.5%;
     box-shadow: 3px 3px 5px 1px #0004;
 }
 .keyFeatures h3{
@@ -195,10 +199,9 @@ main small{
     width: 64px;
     height: 64px;
     line-height: 64px;
-    box-shadow: inset 0px 0 5px 1px #0004;
-    color: #777;
+    color: #999;
     border-radius: 50rem;
-    border: 2px solid #777;
+    border: 2px solid #999;
     font-size: 24px;
     transition: 0.35s all ease;
 }
