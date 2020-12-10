@@ -1,0 +1,1 @@
+copyright.innerHTML=copyright.innerHTML.replace("2019", new Date().getFullYear())

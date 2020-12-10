@@ -6,6 +6,14 @@
     -webkit-user-drag: none;
     box-sizing: border-box;
 }
+::-webkit-scrollbar{
+    width: 5px;
+    background-color: #fff;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #000;
+    border-radius: 15px;
+}
 body{
     background-color: lightblue;
 }
@@ -25,7 +33,7 @@ header{
     flex-grow: 1;
 }
 .Left_part h1{
-    font-weight: normal;
+    font-weight: 600;
 }
 .logo{
     width: 3rem;
@@ -164,14 +172,14 @@ main small{
 }
 .keyFeatures{
     width: auto;
-    margin: 0.5% 15%;;
+    margin: 1.5% 15%;
     border: 2px solid #222;
     border-radius: 5px;
-    padding: 2.5%;
+    padding: 0.5% 2.5%;
     box-shadow: 3px 3px 5px 1px #0004;
 }
 .keyFeatures h3{
-    font-size: 32px;
+    font-size: 24px;
     font-weight: normal;
     text-align: center;
 }
@@ -180,15 +188,15 @@ main small{
     justify-content: space-around;
     flex-wrap: wrap;
     counter-reset: feature;
-    padding: 2.5% 0;
+    padding: 1.5% 0;
     text-align: center;
 }
 .featureCard{
     width: 300px;
     counter-increment: feature;
     position: relative;
-    margin: 5% 0;
-    padding-top: 96px;
+    margin: 0.5% 0;
+    padding-top: 64px;
 }
 .featureCard::before{
     position: absolute;
@@ -196,18 +204,30 @@ main small{
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 64px;
-    height: 64px;
-    line-height: 64px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
     color: #999;
     border-radius: 50rem;
     border: 2px solid #999;
-    font-size: 24px;
+    font-size: 16px;
     transition: 0.35s all ease;
 }
 .featureCard:hover::before{
     border: 2px solid #3b873b;
     color: #3b873b;
+}
+footer{
+    display: flex;
+    padding: 2.5% 0;
+    background-color: lightskyblue;
+    flex-direction: column;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+}
+footer .dev a{
+    
 }
 @media (max-width: 624px){
     .Right_part{
