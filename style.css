@@ -204,6 +204,9 @@ main small{
     color: #3b873b;
 }
 @media (max-width: 624px){
+    .Right_part{
+        padding: 5% 0;
+    }
     main p{
         padding: 5%;
     }
