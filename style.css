@@ -1,0 +1,209 @@
+*{
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    -webkit-user-drag: none;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    background-color: skyblue;
+    z-index: 2;
+    box-shadow: 0 0 3px #0007;
+}
+.Left_part{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+.Left_part h1{
+    font-weight: normal;
+}
+.logo{
+    width: 3rem;
+    margin: 1rem 2rem;
+}
+.Right_part{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+    position: relative;
+}
+a:not(.nounderline)::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #000;
+    transition: 0.35s width ease;
+}
+a:not(.nounderline):hover::after{
+    width: 100%;
+}
+.actionsWrap{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.CodeAction{
+    padding: 2.5% 5%;
+}
+.CodeAction .wrap{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
+.CodeAction h2{
+    font-weight: normal;
+    font-size: 24px;
+    flex-grow: 2;
+}
+.CodeAction input[type="text"]{
+    padding: 0.5rem;
+    outline: none;
+    margin: 2% 0;
+    flex-grow: 2;
+    border: none;
+    border-bottom: 1px solid #000;
+}
+.CodeAction button{
+    padding: 0.5rem;
+    margin: 2% 5%;
+    position: relative;
+    outline: none;
+    border-radius: 0;
+    z-index: 1;
+    border: 1px solid #000;
+    overflow: hidden;
+    flex-grow: 1;
+    transition: 0.35s color ease;
+}
+.CodeAction button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 75%;
+    transform: skewX(-15deg) translateX(-125%);
+    z-index: -1;
+    background-color: #000;
+    transition: 0.35s transform ease;
+}
+.CodeAction button::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 75%;
+    transform: skewX(-15deg) translateX(150%);
+    z-index: -1;
+    background-color: #000;
+    transition: 0.35s transform ease;
+}
+.CodeAction button:hover{
+    color: #FFF;
+}
+.CodeAction button:hover::before{
+    transform: skewX(-15deg) translateX(-37.5%);
+}
+.CodeAction button:hover::after{
+    transform: skewX(-15deg) translateX(50%);
+}
+main{
+    padding: 5% 0;
+    display: block;
+    text-align: center;
+}
+main p{
+    display: block;
+    padding: 0.25% 25%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 18px;
+}
+main small{
+    display: inline-block;
+    color: #999;
+    max-width: 50%;
+}
+.AboutSafety_Header{
+    font-weight: normal;
+    font-size: 49px;
+    padding: 2.5% 5%;
+    margin: 5% 0;
+}
+.keyFeatures{
+    width: auto;
+    margin: 1.5% 15%;;
+    border: 2px solid #222;
+    border-radius: 5px;
+    padding: 5%;
+    box-shadow: 3px 3px 5px 1px #0004;
+}
+.keyFeatures h3{
+    font-size: 32px;
+    font-weight: normal;
+    text-align: center;
+}
+.featuresWrap{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    counter-reset: feature;
+    padding: 2.5% 0;
+    text-align: center;
+}
+.featureCard{
+    width: 300px;
+    counter-increment: feature;
+    position: relative;
+    margin: 5% 0;
+    padding-top: 96px;
+}
+.featureCard::before{
+    position: absolute;
+    content: counter(feature);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
+    box-shadow: inset 0px 0 5px 1px #0004;
+    color: #777;
+    border-radius: 50rem;
+    border: 2px solid #777;
+    font-size: 24px;
+    transition: 0.35s all ease;
+}
+.featureCard:hover::before{
+    border: 2px solid #3b873b;
+    color: #3b873b;
+}
+@media (max-width: 624px){
+    main p{
+        padding: 5%;
+    }
+    .keyFeatures h3, .AboutSafety_Header{
+        text-align: center;
+    }
+}
