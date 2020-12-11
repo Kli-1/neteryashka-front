@@ -88,7 +88,7 @@ a:not(.nounderline):hover::after{
     font-size: 24px;
     flex-grow: 2;
 }
- input[type="text"], input[type="password"]{
+ input[type="text"], input[type="password"], input[type="email"]{
     padding: 0.5rem;
     outline: none;
     background: transparent;

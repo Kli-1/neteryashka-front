@@ -35,6 +35,11 @@
     cursor: pointer;
     font-size: 24px;
 }
+.modal h2{
+    font-size: 32px;
+    font-weight: normal;
+    padding-bottom: 1.5rem;
+}
 .await{
     font-size: 36px;
     font-weight: 500;

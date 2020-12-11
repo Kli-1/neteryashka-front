@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://gist.githubusercontent.com/AndrewCraswell/106143d1bb5d4162689b9e1d89a2d0fb/raw/e6d187e8e2a4ef85551ee7d6f16cb1350a19dc39/gistfile1.txt">
 </head>
 <body>
+<div class="modalRoot inactive"></div>
 <header>
     <div class="Left_part">
         <img src="https://i.ibb.co/Y3whndd/Pin-Clipart-com-animal-clip-art-5244891-2.png" alt="" class="logo">
@@ -19,8 +20,8 @@
         </div>
     </div>
     <nav class="Right_part">
-        <a href="/contactt">Обратная связь</a>
-        <a href="/buy">Купить комплект "Нетеряшка"</a>
+        <a onclick="contact()" href="#contactt">Обратная связь</a>
+        <a href="https://vk.com/neteryashka_asha">Купить комплект "Нетеряшка"</a>
     </nav>
 </header>
 <main>
@@ -40,13 +41,13 @@
     <div class="CodeAction">
         <h2>Зарегистрировать уникальный код комплекта</h2>
         <div class="wrap">
-            <input type="text" placeholder="Введите уникальный код здесь..."><button>Далее</button>
+            <input type="text" id="code" placeholder="Введите уникальный код здесь..."><button onclick="formReg()">Далее</button>
         </div>
     </div>
     <div class="CodeAction">
         <h2>Поиск владельца найденной вещи</h2>
         <div class="wrap">
-            <input type="text" placeholder="Введите уникальный код здесь..."><button>Искать</button>
+            <input type="text" id="gCode" placeholder="Введите уникальный код здесь..."><button onclick="getCode(gCode.value)">Искать</button>
         </div>
     </div>
 </div>
