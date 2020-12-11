@@ -17,7 +17,7 @@ const formReg = ()=>{
             <label><input id="tel" minlength="2" inputmode="numeric" minlength="11" maxlength="11" placeholder="Телефон (без +)" type="text"/></label>
             <label><input id="mail" minlength="2" required placeholder="Почта" type="email"/><font color="red">*</font></label>
         </div>
-        <small><input type="checkbox" required/> Я согласен с тем что мои персональные данные будут доступны людям, нашедшим предмет</small>
+        <label><input type="checkbox" required/> Я согласен с тем что мои персональные данные будут доступны людям, нашедшим предмет</label>
         <button>Зарегистрировать</button>
     </form>
     `);
