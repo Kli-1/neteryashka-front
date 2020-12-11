@@ -10,7 +10,7 @@ const logOut = ()=>{
 }
 const loadMore = async ()=>{
     loadingSet();
-    let k = await fetch("https://neteryashka.herokuapp.com/api/admin/item-codes/get-all", {
+    let k = await fetch("/api/admin/item-codes/get-all", {
         "credentials": "same-origin"
     }).then(res=>res.json()).catch(()=>{
         openModal('Ошибка',`<p>Произошла ошибка на сервере. Обратитесь к создателям</p>`)

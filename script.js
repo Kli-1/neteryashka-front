@@ -31,7 +31,7 @@ const regCode = ()=>{
             "error": "Ошибка"
         }[d.status],d.message);
     }
-    XHR.open("POST", "https://neteryashka.herokuapp.com/api/user/item-codes/register");
+    XHR.open("POST", "/api/user/item-codes/register");
     let debug = {
         "name": namefy.value,
         "code": code2.value,
@@ -44,7 +44,7 @@ const regCode = ()=>{
     XHR.send(JSON.stringify(debug));
 }
 const getCode = async (val)=>{
-    let res = await fetch(`https://neteryashka.herokuapp.com/api/user/item-codes/get?code=${val}`).then(res=>res.json());
+    let res = await fetch(`/api/user/item-codes/get?code=${val}`).then(res=>res.json());
     let resItems = [
         "Код",
         "Имя",
