@@ -29,4 +29,4 @@ const loadMore = async ()=>{
         }
     }
 }
-document.addEventListener("DOMContentLoaded", loadMore);
+setTimeout(loadMore, 1200);
