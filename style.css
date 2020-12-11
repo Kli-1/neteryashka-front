@@ -154,7 +154,7 @@ main{
     padding: 5% 0;
     display: block;
     text-align: center;
-    background-image: url("http://www.fonstola.ru/pic/201212/2560x1440/fonstola.ru-84385.jpg");
+    background-image: url("/fonstola.ru-84385.jpg");
     background-size: cover;
     box-shadow: inset 0 0 5px 1px #0008;
 }
