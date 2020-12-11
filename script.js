@@ -62,7 +62,7 @@ if (res.status=="success"){
             itemMarkup+= `
             ${resItems[key2]}: ${itemRow}<br/>
             `;
-        п}
+        }
         });
     });
     }
