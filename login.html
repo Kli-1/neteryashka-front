@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/modals.css">
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <style>
+        #wrap{
+            width: 100vw;
+            height: 100vh;
+            background-image: url("https://images.unsplash.com/photo-1446488547543-78c11468449a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1349&q=80");
+            background-size: cover;
+            background-position: center center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2.5% 5%;
+            background-color: #fff;
+            box-shadow: 1px 2px 7px 3px #0004;
+        }
+        .login *{
+            width: 100%;
+            margin: 1rem !important;
+        }
+        h1{
+            text-align: center;
+            font-weight: normal;
+            margin-bottom: 5rem;
+        }
+    </style>
+    <body>
+        <div class="modalRoot inactive"></div>
+            <div id="wrap">
+                <form onsubmit="return false;" class="login">
+                    <h1>Вход</h1>
+                    <input id="userName" type="text" placeholder="Имя пользователя">
+                    <input id="passWord" type="password" placeholder="Пароль">
+                    <button onclick="login()">Войти</button>
+                </form>
+            </div>
+            <footer>
+                <p>Frontend by <a href="//vk.com/int_a">Jyzrr</a> (<a href="mailto:jyzrr@icloud.com">Mail Me)</a></p>
+                <div class="dev">Backend by <a href="https://kwork.ru/user/andrey_vyazemskiy" target="_blank">Andrey Vyazemsky</a></div>
+            </footer>
+            <script src="/login.js"></script>
+            <script src="/modals.js"></script>
+    </body>
+</html>

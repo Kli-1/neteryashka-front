@@ -16,6 +16,7 @@
 }
 body{
     background-color: lightblue;
+    overflow-x: hidden;
 }
 header{
     display: flex;
@@ -28,15 +29,18 @@ header{
 }
 .Left_part{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-grow: 1;
 }
 .Left_part h1{
+    font-size: 7rem;
     font-weight: 600;
+    color: darkturquoise;
+    -webkit-text-stroke: #000 1px;
 }
 .logo{
-    width: 3rem;
+    height: 7rem;
     margin: 1rem 2rem;
 }
 .Right_part{
@@ -84,7 +88,7 @@ a:not(.nounderline):hover::after{
     font-size: 24px;
     flex-grow: 2;
 }
-.CodeAction input[type="text"]{
+ input[type="text"], input[type="password"]{
     padding: 0.5rem;
     outline: none;
     background: transparent;
@@ -94,7 +98,7 @@ a:not(.nounderline):hover::after{
     border-bottom: 1px solid #000;
     transition: 0.35s all ease;
 }
-.CodeAction button{
+button{
     padding: 0.5rem;
     cursor: pointer;
     margin: 2% 5%;
@@ -102,13 +106,14 @@ a:not(.nounderline):hover::after{
     outline: none;
     border-radius: 0;
     z-index: 1;
+    background-color: skyblue;
     box-shadow: 1px 1px 3px 1px #0004;
     border: 1px solid #000;
     overflow: hidden;
     flex-grow: 1;
     transition: 0.35s all ease;
 }
-.CodeAction button::before{
+button::before{
     content: "";
     position: absolute;
     top: 0;
@@ -120,7 +125,7 @@ a:not(.nounderline):hover::after{
     background-color: #000;
     transition: 0.35s transform ease;
 }
-.CodeAction button::after{
+button::after{
     content: "";
     position: absolute;
     top: 0;
@@ -132,16 +137,16 @@ a:not(.nounderline):hover::after{
     background-color: #000;
     transition: 0.35s transform ease;
 }
-.CodeAction button:hover{
+button:hover{
     color: #FFF;
 }
-.CodeAction button:hover::before{
+button:hover::before{
     transform: skewX(-15deg) translateX(-37.5%);
 }
-.CodeAction button:hover::after{
+button:hover::after{
     transform: skewX(-15deg) translateX(50%);
 }
-.CodeAction button:active{
+button:active{
     filter: brightness(75%);
     box-shadow: 0 0 3px 1px #0004;
 }
@@ -149,37 +154,51 @@ main{
     padding: 5% 0;
     display: block;
     text-align: center;
+    background-image: url("http://www.fonstola.ru/pic/201212/2560x1440/fonstola.ru-84385.jpg");
+    background-size: cover;
+    box-shadow: inset 0 0 5px 1px #0008;
+}
+.tab{
+    background-color: #9adff8;
+    /* border: 2px solid #000; */
+    margin: 0 auto;
+    padding: 1.5% 0;
+    max-width: 50%;
+    box-shadow: inset 0 0 3px 1px #0007;
 }
 main p{
     display: block;
-    padding: 0.25% 25%;
+    padding: 0.5%;
     text-align: center;
-    margin: 0 auto;
-    font-size: 14px;
+    width: 75%;
+    margin: auto;
+    font-size: 18px;
 }
 main small{
     display: inline-block;
     color: #999;
+    margin: 1.5% 0;
     max-width: 50%;
-    font-size: 10px;
+    font-size: 12px;
 }
 .AboutSafety_Header{
     font-weight: normal;
-    font-size: 32px;
+    font-size: 64px;
     text-align: center;
     padding: 0.5% 5%;
     margin: 1.5% 0;
 }
 .keyFeatures{
     width: auto;
-    margin: 1.5% 15%;
+    margin: 5% 15%;
     border: 2px solid #222;
     border-radius: 5px;
-    padding: 0.5% 2.5%;
+    padding: 1.5% 2.5%;
     box-shadow: 3px 3px 5px 1px #0004;
 }
 .keyFeatures h3{
-    font-size: 24px;
+    font-size: 32px;
+    margin-bottom: 2.5%;
     font-weight: normal;
     text-align: center;
 }
@@ -195,8 +214,9 @@ main small{
     width: 300px;
     counter-increment: feature;
     position: relative;
+    font-size: 18PX;
     margin: 0.5% 0;
-    padding-top: 64px;
+    padding-top: 96px;
 }
 .featureCard::before{
     position: absolute;
@@ -204,13 +224,13 @@ main small{
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 32px;
-    height: 32px;
-    line-height: 32px;
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
     color: #999;
     border-radius: 50rem;
     border: 2px solid #999;
-    font-size: 16px;
+    font-size: 32px;
     transition: 0.35s all ease;
 }
 .featureCard:hover::before{
@@ -225,9 +245,6 @@ footer{
     font-size: 18px;
     justify-content: center;
     align-items: center;
-}
-footer .dev a{
-    
 }
 @media (max-width: 624px){
     .Right_part{

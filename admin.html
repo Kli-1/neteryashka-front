@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Админ-панель</title>
+    <link rel="stylesheet" href="/modals.css">
+    <link rel="stylesheet" href="/astyle.css">
+    <link rel="shortcut icon" href="https://i.ibb.co/Y3whndd/Pin-Clipart-com-animal-clip-art-5244891-2.png" type="image/png">
+    <link rel="stylesheet" href="https://gist.githubusercontent.com/AndrewCraswell/106143d1bb5d4162689b9e1d89a2d0fb/raw/e6d187e8e2a4ef85551ee7d6f16cb1350a19dc39/gistfile1.txt">
+</head>
+<body>
+<div class="modalRoot inactive"></div>
+<header class="admin-head">
+    <h1>Админ-панель</h1>
+    <button onclick="logOut()">Выйти</button>
+</header>
+<main>
+    <h2>Таблица</h2>
+    <div  class="mainTable">
+        <div class="head">
+            <div class="cell">Код</div>
+            <div class="cell">ФИО Владельца</div>
+            <div class="cell">Контактная информация</div>
+        </div>
+        <div id="addHere" class="body">
+        </div>
+        <!-- <div class="row"><button class="loadMore" onclick="loadMore()">Обновить</button></div> -->
+    </div>
+</main>
+<footer>
+    <p>Frontend by <a href="//vk.com/int_a">Jyzrr</a> (<a href="mailto:jyzrr@icloud.com">Mail Me)</a></p>
+    <div class="dev">Backend by <a href="https://kwork.ru/user/andrey_vyazemskiy" target="_blank">Andrey Vyazemsky</a></div>
+</footer>
+<script src="/admin.js"></script>
+<script src="/modals.js"></script>
+</body>
+</html>
