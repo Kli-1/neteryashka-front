@@ -247,13 +247,30 @@ footer{
     align-items: center;
 }
 @media (max-width: 624px){
+    .Left_part h1{
+        font-size: 32px;
+    }
     .Right_part{
         padding: 5% 0;
     }
     main p{
         padding: 5%;
     }
+    .tab{
+        width: 90%;
+        max-width: none;
+    }
     .keyFeatures h3, .AboutSafety_Header{
+        text-align: center;
+    }
+    .AboutSafety_Header{
+        font-size: 32px;
+    }
+    .featureCard{
+        margin-bottom: 5%;
+    }
+    footer p, .dev{
+        padding: 5% 0;
         text-align: center;
     }
 }
